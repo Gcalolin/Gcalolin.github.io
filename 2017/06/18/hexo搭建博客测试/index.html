@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>hexo搭建博客测试 | 姓郭不是锅</title>
+  <title>hexo+github搭建博客 | 姓郭不是锅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hexo + github搭建自己的博客 1$ hexo server link: myblog">
+  <meta name="description" content="有些事，总得自己倒腾倒腾，比如说用 hexo + github 搭建自己的博客 前期准备工作 全局安装hexo npm install -g hexo 创建一个文件夹，比如：hexoWorkspace，在git bash 命令面板里cd到hexoWorkspace里执行hexo init 执行hexo generate 执行hexo server">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo搭建博客测试">
+<meta property="og:title" content="hexo+github搭建博客">
 <meta property="og:url" content="http://yoursite.com/2017/06/18/hexo搭建博客测试/index.html">
 <meta property="og:site_name" content="姓郭不是锅">
-<meta property="og:description" content="hexo + github搭建自己的博客 1$ hexo server link: myblog">
-<meta property="og:updated_time" content="2017-06-18T04:54:00.266Z">
+<meta property="og:description" content="有些事，总得自己倒腾倒腾，比如说用 hexo + github 搭建自己的博客 前期准备工作 全局安装hexo npm install -g hexo 创建一个文件夹，比如：hexoWorkspace，在git bash 命令面板里cd到hexoWorkspace里执行hexo init 执行hexo generate 执行hexo server">
+<meta property="og:updated_time" content="2017-06-18T16:13:05.559Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo搭建博客测试">
-<meta name="twitter:description" content="hexo + github搭建自己的博客 1$ hexo server link: myblog">
+<meta name="twitter:title" content="hexo+github搭建博客">
+<meta name="twitter:description" content="有些事，总得自己倒腾倒腾，比如说用 hexo + github 搭建自己的博客 前期准备工作 全局安装hexo npm install -g hexo 创建一个文件夹，比如：hexoWorkspace，在git bash 命令面板里cd到hexoWorkspace里执行hexo init 执行hexo generate 执行hexo server">
   
     <link rel="alternative" href="/atom.xml" title="姓郭不是锅" type="application/atom+xml">
   
@@ -160,7 +160,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      hexo搭建博客测试
+      hexo+github搭建博客
     </h1>
   
 
@@ -173,9 +173,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>hexo + github搭建自己的博客</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>link: <a href="http://Gcalolin.github.io" target="_blank" rel="external">myblog</a></p>
+        <p>有些事，总得自己倒腾倒腾，比如说用 hexo + github 搭建自己的博客</p>
+<h2 id="前期准备工作"><a href="#前期准备工作" class="headerlink" title="前期准备工作"></a>前期准备工作</h2><ul>
+<li>全局安装hexo <code>npm install -g hexo</code></li>
+<li>创建一个文件夹，比如：hexoWorkspace，在git bash 命令面板里cd到hexoWorkspace里执行<code>hexo init</code></li>
+<li>执行<code>hexo generate</code></li>
+<li><p>执行<code>hexo server</code></p>
+<a id="more"></a>
+<h2 id="安装及更换主题"><a href="#安装及更换主题" class="headerlink" title="安装及更换主题"></a>安装及更换主题</h2></li>
+<li>选择主题：<a href="https://hexo.io/themes/" target="_blank" rel="external">官方主题</a> 随你选</li>
+<li><p>安装主题,将主题下载或者clone到你的站点目录的 themes 目录中，比如我要安装yilia主题，那么将改文件夹复制到themes中，即为<code>themes/yilia</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</div></pre></td></tr></table></figure>
+</li>
+<li><p>将主题应用到你的博客当中，打开 站点配置文件_config.yml，找到 theme 字段，并将其值更改为 <code>yilia</code>(你要安装的主题的文件夹名字) 。</p>
+</li>
+<li><p><code>hexo s</code>启动服务，访问<code>http://localhost:4000</code></p>
+</li>
+<li><code>hexo d</code>部署到github pages上</li>
+</ul>
+<h2 id="创建一篇博客"><a href="#创建一篇博客" class="headerlink" title="创建一篇博客"></a>创建一篇博客</h2><ul>
+<li><p>方法一：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"文章标题"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>方法二：<br>在本地博客文件夹<code>source-&gt;_post</code>文件夹下看到我们新建的markdown文件<br>两者的效果是一样的</p>
+</li>
+</ul>
+<p>如果想要让文章只显示一部分和一个 阅读全文 的按钮，那就在文章中加一个<code>&lt;!--more--&gt;</code>,<code>&lt;!--more--&gt;</code>后面的内容就不会显示出来了。</p>
+<h2 id="进行本地发布"><a href="#进行本地发布" class="headerlink" title="进行本地发布"></a>进行本地发布</h2><ul>
+<li><code>hexo s</code>启动服务，访问<code>http://localhost:4000</code><h2 id="部署到线上"><a href="#部署到线上" class="headerlink" title="部署到线上"></a>部署到线上</h2></li>
+<li><code>hexo c (hexo clean)</code></li>
+<li><code>hexo g (hexo generate)</code></li>
+<li><code>hexo d (hexo deploy)</code><h2 id="一些常用的命令"><a href="#一些常用的命令" class="headerlink" title="一些常用的命令"></a>一些常用的命令</h2></li>
+<li><code>hexo new &quot;article name&quot;</code>#新建文章</li>
+<li><code>hexo new page &quot;page name&quot;</code>#新建页面</li>
+<li><code>hexo generate</code>#生成静态页面至public目录</li>
+<li><code>hexo server</code>#开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</li>
+<li><code>hexo deploy</code>#将.deploy目录部署到GitHub</li>
+<li><code>hexo help</code>#查看帮助</li>
+<li><code>hexo version</code>#查看Hexo的版本</li>
+</ul>
+<p>参考文章：</p>
+<p><a href="https://xianyulaodi.github.io/2017/04/08/hexo+github%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">咸鱼老弟的博客</a></p>
+<p><a href="http://blog.liuxianan.com/build-blog-website-by-hexo-github.html" target="_blank" rel="external">柳夏南的博客</a></p>
 
       
 
